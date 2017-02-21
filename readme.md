@@ -5,7 +5,7 @@
 
 This is my progress through the JavaScript30.
 
-Starter Files + Completed solutions for the JavaScript 30 Day Challenge.
+All assets where grabbed from the course website.
 
 Grab the course at [https://JavaScript30.com](https://JavaScript30.com)
 
