@@ -29,12 +29,12 @@
 
     img {
       padding: var(--spacing);  
-      background: var(--base);
+      background: var(--base); /*references the variables*/
       filter: blur(var(--blur));
     }
 
     .hl {
-      color: var
+      color: var(--base);/*references the variables*/
     }
     /*
       misc styles, nothing to do with CSS variables
@@ -62,6 +62,16 @@
   </style>
 
   <script>
+   const inputs = document.querySelectorAll('.controls input')// selects the 
+
+   function handleUpdate() {
+     const suffix = this.dataset.sizing || ''; // makes sure the px goes at the end of the value or for hexcodes doesnt
+     document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);  // adds the value with the dataset and the css syling
+   }
+
+   inputs.forEach(input => input.addEventListener('change',handleUpdate)); //looks for a change in the value
+   inputs.forEach(input => input.addEventListener('mousemove',handleUpdate));//looks for a change in the value with mouse movement
+
   </script>
 
 </body>
